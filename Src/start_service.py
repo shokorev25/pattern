@@ -66,9 +66,9 @@ class start_service:
     def load(self) -> bool:
         if self.__full_file_name == "":
             raise operation_exception("Не найден файл настроек!")
-
+        
         try:
-            with open( self.__full_file_name, 'r') as file_instance:
+            with open(self.__full_file_name, 'r', encoding='utf-8') as file_instance:
                 settings = json.load(file_instance)
                 return self.convert(settings)
         except Exception as e:
