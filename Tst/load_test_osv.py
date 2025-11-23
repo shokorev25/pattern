@@ -44,9 +44,7 @@ def run_load_test():
         results.append(f"| {block_str} | {elapsed:.4f} |")
 
     with open("load_test_results.md", "w", encoding="utf-8") as f:
-        f.write("# Load Test Results\n| Block Period | Time (s) |\n|---|----|\n" + "\n".join(results))
-    
-    print("ГОТОВО! Файл load_test_results.md")
+        f.write("# Load Test Results\n| Block Period | Time (s) |\n|---|----|\n" + "\n".join(results)
 
 if __name__ == "__main__":
     run_load_test()
